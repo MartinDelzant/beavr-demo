@@ -17,12 +17,16 @@ export default async function Documents() {
       </div>
       {documentTypes.map((d) => (
         <DocumentTypeUI key={d.id} documentType={d} onlyLatestDocument={false}>
-          <button
-            className="mt-2 p-2 round border-2 hover:bg-gray-300"
-            style={{ maxWidth: 300 }}
-          >
-            <a href={buildHref(d.id)}>Create new document</a>
-          </button>
+          <div>
+            <a href={buildHref(d.id)}>
+              <button
+                className="mt-2 p-2 round border-2 hover:bg-gray-300"
+                style={{ maxWidth: 300 }}
+              >
+                Create new document
+              </button>
+            </a>
+          </div>
         </DocumentTypeUI>
       ))}
     </div>
